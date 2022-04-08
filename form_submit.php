@@ -5,8 +5,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once "vendor/autoload.php";
 
-$mymail = 'saikatf2021@gmail.com';
-$mypass = 'changedmailpass@21@3';
+$mymail = 'yourmail@gmail.com';
+$mypass = 'yourpassword';
 
 $mail1 = new PHPMailer(true);
 
