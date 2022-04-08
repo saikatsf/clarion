@@ -5,21 +5,24 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once "vendor/autoload.php";
 
+$mymail = 'saikatf2021@gmail.com';
+$mypass = 'changedmailpass@21@3';
+
 $mail1 = new PHPMailer(true);
 
 //Enable SMTP debugging.
 $mail1->isSMTP();                        
 $mail1->Host = "smtp.gmail.com";
 $mail1->SMTPAuth = true;   
-$mail1->Username = "rapidcash250@gmail.com";                 
-$mail1->Password = "Rapidcash@2022";
+$mail1->Username = $mymail;               
+$mail1->Password = $mypass;
 $mail1->SMTPSecure = "tls";
 $mail1->Port = 587;                                   
 
-$mail1->From = "rapidcash250@gmail.com";
+$mail1->From = $mymail;
 $mail1->FromName = "Clarion";
 
-$mail1->addAddress("rapidcash250@gmail.com");
+$mail1->addAddress($mymail);
 
 $mail1->isHTML(true);
 $mail1->Subject = "Form Submissiion";
@@ -34,12 +37,12 @@ try {
     $mail2->isSMTP();                        
     $mail2->Host = "smtp.gmail.com";
     $mail2->SMTPAuth = true;   
-    $mail2->Username = "rapidcash250@gmail.com";                 
-    $mail2->Password = "Rapidcash@2022";
+    $mail2->Username = $mymail;              
+    $mail2->Password = $mypass;
     $mail2->SMTPSecure = "tls";
     $mail2->Port = 587;                                   
 
-    $mail2->From = "rapidcash250@gmail.com";
+    $mail2->From = $mymail;
     $mail2->FromName = "Clarion";
 
     $mail2->addAddress($_POST['email']);
